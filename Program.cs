@@ -29,10 +29,10 @@ namespace topic_5
                     double[] planet_gravity = { 0.78, 0.39, 2.65, 1.17, 1.05, 1.23 };
                     int visiting;
 
-                        Console.Write("Please enter your current earth weight: ");
+                        Console.Write("Please enter your current earth weight value: ");
                     double.TryParse(Console.ReadLine(), out weight);
 
-                    if (weight == 0)
+                    if (weight <= 0)
                     {
                         Console.WriteLine("invalid weight");
                     }
@@ -49,10 +49,29 @@ namespace topic_5
                         int.TryParse(Console.ReadLine(), out visiting);
                         Console.WriteLine();
                         Console.Write($"Your weight would be {weight * planet_gravity[visiting-1]} pounds on that planet.");
-
-
                     }
                 }
+                else if (run == 2)
+                {
+                    int secret_number = 7;
+                    int input;
+
+                    Console.Write("guess a number from 1-10 ");
+                    int.TryParse(Console.ReadLine(), out input);
+
+                    if (input == secret_number) { Console.WriteLine($"wow, you got it right! the number was {secret_number}"); }
+                    else { Console.WriteLine($"WRONG! it was {secret_number}"); }
+
+                }
+                else if (run == 3)
+                {
+                    
+                }
+                Console.WriteLine();
+                Console.Write("press enter to continue");
+                Console.ReadLine();
+                Console.Clear();
+
             }
         }
     }
