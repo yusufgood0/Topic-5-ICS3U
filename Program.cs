@@ -53,19 +53,79 @@ namespace topic_5
                 }
                 else if (run == 2)
                 {
+                    //part 2
                     int secret_number = 7;
-                    int input;
 
-                    Console.Write("guess a number from 1-10 ");
-                    int.TryParse(Console.ReadLine(), out input);
+                    Console.Write("guess a number from 1-10: ");
 
-                    if (input == secret_number) { Console.WriteLine($"wow, you got it right! the number was {secret_number}"); }
-                    else { Console.WriteLine($"WRONG! it was {secret_number}"); }
+                    if (Console.ReadLine() == Convert.ToString(secret_number)) 
+                    { 
+                        Console.WriteLine($"wow, you got it right! the number was {secret_number}"); 
+                    }
+                    else 
+                    { 
+                        Console.WriteLine($"WRONG! it was {secret_number}"); 
+                    }
 
                 }
                 else if (run == 3)
                 {
-                    
+                    //part 3
+                    int score = 0;
+                    int question_1_number_1 = 2;
+                    int question_1_number_2 = 4;
+
+                    Console.WriteLine("this is a 4 question quiz");
+
+                    //question 1
+                    Console.WriteLine($"what is {question_1_number_1} + {question_1_number_2}?");
+                    if (Console.ReadLine() == Convert.ToString(question_1_number_1 + question_1_number_2))
+                    {
+                        Console.WriteLine("CORRECT!");
+                        score += 1;
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("INCORRECT!");
+                    }
+                    Console.WriteLine();
+
+                    //question 2
+                    Console.WriteLine("what is the capital of Ontario?");
+                    if (Console.ReadLine().ToUpper() == "TORONTO")
+                    {
+                        Console.WriteLine("CORRECT!");
+                        score += 1;
+                    }
+                    else
+                    {
+                        Console.WriteLine("INCORRECT!");
+                        Console.WriteLine("It almost ryhmes with it, its TORONTO!");
+                    }
+                    Console.WriteLine();
+
+                    Console.WriteLine(@"Who is Spiderman:
+A. Peter Parker
+B. Superman
+C. Kent Clark
+D. Batman
+
+");
+                    if (Console.ReadLine().ToUpper() == "A")
+                    {
+                        Console.WriteLine("CORRECT!");
+                        score += 1;
+                    }
+                    else
+                    {
+                        Console.WriteLine("INCORRECT!");
+                        Console.WriteLine("Maybe rewatch Spiderman. The original.");
+                    }
+
+
+
+
                 }
                 Console.WriteLine();
                 Console.Write("press enter to continue");
