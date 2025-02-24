@@ -74,6 +74,7 @@ namespace topic_5
                     int score = 0;
                     int question_1_number_1 = 2;
                     int question_1_number_2 = 4;
+                    int TF_input;
 
                     Console.WriteLine("this is a 4 question quiz");
 
@@ -103,7 +104,6 @@ namespace topic_5
                         Console.WriteLine("INCORRECT!");
                         Console.WriteLine("It almost ryhmes with it, its TORONTO!");
                     }
-                    Console.WriteLine();
 
                     Console.WriteLine(@"Who is Spiderman:
 A. Peter Parker
@@ -122,9 +122,20 @@ D. Batman
                         Console.WriteLine("INCORRECT!");
                         Console.WriteLine("Maybe rewatch Spiderman. The original.");
                     }
-
-
-
+                    
+                    Console.WriteLine();
+                    Console.WriteLine("waffles are healthy, 'true' or 'false'");
+                    TF_input = Console.ReadLine().ToUpper()
+                        
+                    if (TF_input == "TRUE")
+                    {
+                        Console.WriteLine("CORRECT!");
+                        score += 1;
+                    }
+                    if (TF_input == "FALSE")
+                    {
+                        Console.WriteLine("INCORRECT!");
+                    }
 
                 }
                 Console.WriteLine();
